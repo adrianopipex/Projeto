@@ -1,0 +1,52 @@
+# 📲 Sistema de Envio Automático de Mensagens via WhatsApp
+
+## 📌 Descrição
+Este projeto foi desenvolvido para automatizar o envio de mensagens via **WhatsApp Web**, incluindo textos personalizados e imagens.  
+O sistema utiliza uma planilha de clientes como base e envia mensagens dinâmicas com foco em supermercados.
+
+---
+
+## 👨‍💻 Desenvolvedor
+- **Nome:** Adriano Costa  
+- **Versão:** 1.0  
+- **Linguagem:** Python  
+
+---
+
+## 🗂️ Estrutura do Projeto
+- `clientes.xlsx` → Planilha com os contatos (nome e telefone).  
+- `imagem_teste.png` → Imagem enviada junto com a mensagem.  
+- `script.py` → Código principal do sistema.  
+- `erros.csv` → Registro de contatos que não receberam a mensagem.  
+
+---
+
+## 📚 Bibliotecas Utilizadas
+- `openpyxl` → Manipulação de planilhas Excel.  
+- `webbrowser` → Abertura de links no navegador.  
+- `pyautogui` → Automação de teclado e mouse.  
+- `os` → Manipulação de diretórios e arquivos.  
+- `random` → Seleção aleatória de mensagens.  
+- `io` → Manipulação de fluxos de dados.  
+- `ctypes` → Exibição de pop-ups no Windows.  
+- `win32clipboard` → Manipulação da área de transferência (Windows).  
+- `time` → Controle de pausas (`sleep`).  
+- `urllib.parse` → Codificação de URLs.  
+- `PIL (Pillow)` → Manipulação de imagens.  
+
+---
+
+## ⚙️ Funcionalidades
+- Envio automático de mensagens via **WhatsApp Web**.  
+- Inclusão de **imagem** junto ao texto.  
+- Mensagens **dinâmicas e personalizadas** com base no nome do cliente.  
+- Registro de erros em arquivo `.csv`.  
+- Exibição de **popup final** informando conclusão do processo.  
+- Encerramento automático do **Visual Studio Code** após execução (opcional).  
+
+---
+
+## 🚀 Como Usar
+1. Instale as dependências:
+   ```bash
+   pip install openpyxl pyautogui pillow pywin32
