@@ -1,13 +1,51 @@
-Biografia
+# 📲 Projeto_WhatsApp – Sistema de Envio Automático de Mensagens via WhatsApp
 
-Minha trajetória na área de tecnologia é marcada pela curiosidade e pelo desejo constante de transformar dados em conhecimento útil. Ao longo dos anos, mergulhei em projetos que vão desde a construção de sistemas de coleta e análise de dados até a criação de soluções preditivas com machine learning, sempre com o objetivo de gerar impacto real e melhorar a qualidade dos resultados.  
+## 📌 Descrição
+Projeto desenvolvido em Python para automatizar o envio de mensagens via **WhatsApp Web**, incluindo textos personalizados e imagens, utilizando uma planilha de clientes como base.
 
-O que mais me motiva é a possibilidade de dar vida aos números: interpretar tendências, revelar padrões escondidos e transformar informações complexas em insights claros e aplicáveis. Já estive envolvido em iniciativas que exigiram não apenas domínio técnico, mas também criatividade e visão estratégica — como o desenvolvimento de um MVP capaz de antecipar incidentes em produção e apoiar decisões críticas em projetos de tecnologia.  
+## 👨‍💻 Desenvolvedor
+- **Nome:** Adriano Costa
+- **Versão:** 1.0
+- **Linguagem:** Python
 
-Minha experiência é diversa e abrangente. Trabalhei com bancos de dados relacionais, arquiteturas de Data Marts e Data Warehouses, além de ferramentas de BI como Power BI, MicroStrategy e QlikSense. Também explorei o universo da automação com Power Automate, Web Scraping e Selenium, e tive contato com plataformas robustas como SAS Guide. Essa variedade me deu a capacidade de transitar entre diferentes ambientes e adaptar soluções às necessidades de cada projeto.  
+## 🗂️ Estrutura do Repositório
+- `.github/workflows/ci_python_tests.yml` — pipeline de CI (GitHub Actions) que instala as dependências e executa os testes com pytest a cada push/pull request.
+- `Projeto_Whatzap/app8.py` — script principal do sistema de envio automático de mensagens.
+- `Projeto_Whatzap/arquivo.bat` — script batch auxiliar para execução do processo.
+- `Projeto_Whatzap/clientes.xlsx` — planilha com os contatos (nome e telefone).
+- `Projeto_Whatzap/imagem_teste.png` e `icons8-whatsapp-logo-94.ico` — recursos de imagem/ícone utilizados no processo.
+- `Contexto_Projeto` — documentação detalhada do projeto (descrição, bibliotecas, funcionalidades e instruções de uso).
+- `requirements.txt` — dependências utilizadas nos testes (pytest).
+- `test_exemple.py` — teste automatizado de exemplo.
 
-Ao longo da carreira, colaborei com empresas de diferentes setores, sempre com foco em Business Intelligence e análise de dados. Essa vivência me ensinou que tecnologia não é apenas sobre ferramentas, mas sobre pessoas, processos e resultados. Gosto de pensar que cada projeto é uma oportunidade de construir pontes entre dados e decisões, ajudando equipes e organizações a enxergarem além do óbvio.  
+## ⚙️ Funcionalidades
+- Envio automático de mensagens via WhatsApp Web.
+- Envio de imagem junto com o texto da mensagem.
+- Geração de mensagens dinâmicas e personalizadas com o nome do cliente (modelo voltado a supermercados).
+- Leitura da lista de contatos a partir de planilha Excel (`clientes.xlsx`).
+- Cópia de texto e imagem para a área de transferência do Windows, com colagem automática via `pyautogui` e `win32clipboard`.
+- Pipeline de Integração Contínua (GitHub Actions) executando testes automaticamente a cada push ou pull request.
 
-Além da prática, busco constantemente atualização e aprendizado. Tenho certificações em Azure voltadas para Engenharia de Dados, que reforçam minha capacidade de atuar em ambientes modernos e escaláveis.  
+## 📚 Tecnologias e Bibliotecas
+- Python 3.10
+- openpyxl
+- webbrowser
+- pyautogui
+- pywin32 (win32clipboard)
+- Pillow (PIL)
+- pytest (testes)
 
-Em resumo, sou um profissional apaixonado por dados e tecnologia, que acredita no poder da informação para transformar negócios e gerar valor. Mais do que entregar soluções técnicas, meu objetivo é contribuir para que cada projeto conte uma história de evolução e impacto positivo.
+## 🚀 Como Usar
+1. Clone o repositório.
+2. Instale as dependências:
+```bash
+pip install openpyxl pyautogui pillow pywin32 pytest
+```
+3. Preencha a planilha `clientes.xlsx` com nome e telefone dos contatos.
+4. Execute o script `app8.py` (ou `arquivo.bat`) com o WhatsApp Web logado no navegador padrão.
+
+## ✅ Testes
+O repositório possui integração contínua configurada (GitHub Actions), executando os testes com `pytest` automaticamente a cada push ou pull request.
+
+## ⚠️ Observações
+Este script é destinado a uso interno/estudo e não deve ser distribuído sem autorização do desenvolvedor.
